@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "zalithboost",
+  "version": "${version}",
+  "name": "ZalithBoost",
+  "description": "Mod cliente para Android (Zalith Launcher): HUD de combate, tarjeta del enemigo, menú táctil y optimización de FPS.",
+  "authors": ["ZalithBoost"],
+  "license": "MIT",
+  "icon": "assets/zalithboost/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.zalithboost.ZalithBoostClient"],
+    "modmenu": ["com.zalithboost.ZbModMenu"]
+  },
+  "mixins": [
+    { "config": "zalithboost.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": { "modmenu": "*" }
+}
